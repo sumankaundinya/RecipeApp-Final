@@ -110,7 +110,7 @@ document
     const picture = document.getElementById("picture").value;
     const ingredientInputs = document.querySelectorAll(".ingredient-input");
     const ingredientAmounts = document.querySelectorAll(".ingredient-amount");
-
+    const ingredientPrices = document.querySelectorAll(".ingredient-price");
     if (ingredientInputs.length < 5) {
       alert("Please add at least 5 ingredients.");
       return;
@@ -121,6 +121,7 @@ document
       ingredients.push({
         NAME: input.value,
         AMOUNT: ingredientAmounts[index].value,
+        PRICE: ingredientPrices[index].value,
       });
     });
 
