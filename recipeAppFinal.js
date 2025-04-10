@@ -197,6 +197,8 @@ backToTopButton.addEventListener("click", function () {
 let timeSpent = 0;
 setInterval(() => {
   timeSpent++;
-  document.getElementById("timeSpent").textContent = `${timeSpent} seconds`;
+  const minutes = Math.floor(timeSpent / 60);
+  const seconds = timeSpent % 60;
+  document.getElementById("timeSpent").textContent = `${minutes}m ${seconds}s`;
 }, 1000);
 fetchRecipes();
