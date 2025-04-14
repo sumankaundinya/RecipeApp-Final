@@ -153,7 +153,7 @@ const alertSound = new Audio("beep.wav");
 let countdown;
 
 startButton.addEventListener("click", function () {
-  let timeLeft = parseFloat(timerInput.value) * 60; // Convert minutes to seconds
+  let timeLeft = parseFloat(timerInput.value) * 60; 
   if (isNaN(timeLeft) || timeLeft <= 0) {
     alert("Please enter a valid number of minutes.");
     return;
@@ -184,7 +184,7 @@ function updateTimerDisplay(timeLeft) {
   const seconds = timeLeft % 60;
   timerDisplay.textContent = `Time left: ${minutes}m ${seconds}s`;
 }
-const backToTopButton = document.getElementById("backToTopBtn"); // When the user scrolls down 20px from the top, show the button
+const backToTopButton = document.getElementById("backToTopBtn");
 window.onscroll = function () {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     backToTopButton.style.display = "block";
